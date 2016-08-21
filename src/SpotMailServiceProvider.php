@@ -33,7 +33,7 @@ class SpotMailServiceProvider extends ServiceProvider
         $this->app['router']->middleware('email.validate', SpotMailMiddleware::class);
 
         $this->publishes([
-            __DIR__.'/config/spotmail.php' => config_path('spotmail.php')
+            __DIR__.'/config' => config_path()
         ], 'config');
     }
 
@@ -45,7 +45,7 @@ class SpotMailServiceProvider extends ServiceProvider
     public function register()
     {
 
-        $this->mergeConfigFrom(__DIR__.'/config/spotmail.php', 'spotmail');
+        // $this->mergeConfigFrom(__DIR__.'/config/spotmail.php', 'spotmail');
 
         $this->app['spotmail'] = $this->app->share(function($app) {
             return new SpotMail;
