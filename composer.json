@@ -1,0 +1,23 @@
+{
+    "name": "lakshmajim/spotmail",
+    "description": "Checks whether email exists in real world",
+    "keywords": [
+        "Laravel", "email", "fake", "working", "smtp", "email check"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MUTYALA ANANTHA LAKSHMAJI",
+            "email": ""
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Lakshmajim\\SpotMail\\": "src/"
+        }
+    }
+}
